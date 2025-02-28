@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Animation</title>
+    <style>
+        
+        .foodtoday{
+
+            
+  font-family: 'Times New Roman'; 
+  font-size: 16px; 
+  line-height: 1.6; 
+  color: #333; 
+  margin-bottom: 15px; 
+
+        }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh; 
+    background-color: #f0f0f0; 
+    padding: 20px;
+}
+
+.container img {
+    max-width: 200px; 
+    height: auto;
+    margin: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+img {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; 
+}
+
+
+.fade-in {
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.slide-in-left {
+  animation-name: slideInLeft;
+}
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+
+.zoom-in {
+  animation-name: zoomIn;
+} 
+@keyframes zoomIn {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+
+
+.container img:nth-child(2) { animation-delay: 3s; }
+.container img:nth-child(3) { animation-delay: 4s; }
+
+    </style> 
+</head>
+<body>
+    <div class="foodtoday">
+        <h1> ABOUT AS</h1>
+        <p>Food donation is a vital act of charity that helps combat hunger and food insecurity.  It involves individuals, businesses, and organizations voluntarily giving surplus food to those in need.  Donated food can come from various sources, including homes, restaurants, grocery stores, farms, and food manufacturers.  These donations are typically collected by food banks, charities, or community organizations, which then distribute the food to individuals and families facing food shortages.  Food donation not only provides essential nourishment to vulnerable populations but also helps reduce food waste, a significant environmental problem.  By redirecting excess food from landfills to those who need it most, food donation programs contribute to a more sustainable and equitable food system.  Supporting food donation initiatives, whether through donations, volunteering, or advocacy, can make a significant difference in the lives of those struggling with hunger.
+        </p>
+    </div>
+<center>
+    <div class="container">
+        <img src="./pexels-james-frid-81279-2227956.jpg" alt="Animated Image 1" class="fade-in">
+        <img src="./pexels-jc-calera-1832935-3412587 (1).jpg" alt="Animated Image 2" class="slide-in-left">
+        <img src="./pexels-mart-production-8078392.jpg" alt="Animated Image 3" class="zoom-in">
+        
+    </div>
+</center>
+
+</body>
+</html>
